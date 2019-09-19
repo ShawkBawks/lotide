@@ -26,9 +26,16 @@ let quote = "Lighthouse Labs";
 quote = quote.replace(/\s+/g, '');  //removes spaces from string
 
 let letterPositions = function(sentence){
+
   const results = {};
-for (let i = 0; i < sentence.length; i++)
-if ()
+  const letters = sentence.split('');
+
+for (let letter of letters){
+  letter = letter.toLowerCase();
+  if (results[letter]) {
+    result[letter] = result[letter]
+  }
+}
 
   return results;
 };

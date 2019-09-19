@@ -6,16 +6,15 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-let findKeyByValue = function(genres, title){
-for (let key in genres){
-  if (genres[key] === title){
-    return key;
-  }
-  // console.log(genre[style]);
-}
+let findKeyByValue = function(sentence){
+
+const results = {};
+
+for (let value of results){
+  console.log(value);
 }
 
-
+}
 
 
 const bestTVShowsByGenre = { 
@@ -23,8 +22,7 @@ const bestTVShowsByGenre = {
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };
+console.log(Object.keys(bestTVShowsByGenre));
 
-console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama"));
-console.log(assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined));
-
-// console.log(findKeyByValue(bestTVShowsByGenre, "asdf"));
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);

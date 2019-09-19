@@ -22,13 +22,22 @@ if (eqArrays(a === b)){
 
 }
 
-assertArraysEqual(['1', '2'], ['1', '3']);
 
 
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     return (`\u1F60A, \u1F60A, \u1F60A, Assertion Passed:  ${actual} === ${expected}`);
-//   } else if (actual !== expected) {
-//     return (`\u1F92C, \u1F92C, \u1F92C, Assertion failed: ${actual} !== ${expected}`);
-//   }
-// };
+const words = ["ground", "control", "to", "major", "tom"];
+
+const map = (array, callback) => {
+ const results = [];
+  for (let item of array) {
+    results.push(callback(item));
+  }
+  
+  
+  return results;
+}
+
+
+
+const results1 = map(words, word => word[0]);
+const results2 = ['g', 'c', 't', 'm', 't',];
+eqArrays(assertArraysEqual(results1 ), false);
