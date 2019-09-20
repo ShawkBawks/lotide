@@ -1,19 +1,13 @@
-eqArrays = function(a, b){
+const eqArrays = function(a, b){
   if (a instanceof Array && b instanceof Array) {
-    if (a.length != b.length)  //ensuring correct length
-    return false;
-  for (let i =0; i< a.length; i++) //ensuring each element is equal
-     if (!eqArrays(a[i], b[i]))
-        return (false);
-  return (true);
-
-  }else {
-    return a===b;
+    return JSON.stringify(a) === JSON.stringify(b);
   }
+  return false;
 }
 
-assertArraysEqual = function (a, b){
-if (eqArrays(a === b)){
+
+const assertArraysEqual = function (a, b){
+if (a===b){
   console.log(`😁😁😁 Assertion passed! ${a} === ${b}`);
   
 }else {
@@ -23,8 +17,13 @@ if (eqArrays(a === b)){
 }
 
 
-
 const words = ["ground", "control", "to", "major", "tom"];
+const words2 = ["control", "ground", "to", "major", "tom"];
+const days = ["Monday", "Tuesday", "Wednesday"];
+const nums = [1, 2 ,3];
+const nums2 = ["1","2","3"];
+
+
 
 const map = (array, callback) => {
  const results = [];
@@ -39,5 +38,10 @@ const map = (array, callback) => {
 
 
 const results1 = map(words, word => word[0]);
-const results2 = ['g', 'c', 't', 'm', 't',];
-eqArrays(assertArraysEqual(results1 ), false);
+const results2 = map(words, word => word[0]);
+// const results3 = map(days, day => day[2]);
+assertArraysEqual(
+  eqArrays(results1, results2), true
+);
+assertArraysEqual(eqArrays(words, words2),false);
+assertArraysEqual(eqArrays(nums, nums2),false);

@@ -1,15 +1,9 @@
-eqArrays = function(a, b){
+const eqArrays = function(a, b){
   if (a instanceof Array && b instanceof Array) {
-    if (a.length != b.length)  //ensuring correct length
-    return false;
-  for (let i =0; i< a.length; i++) //ensuring each element is equal
-     if (!eqArrays(a[i], b[i]))
-        return (false);
-  return (true);
-
-  }else {
-    return a===b;
+    return JSON.stringify(a) === JSON.stringify(b);
   }
+
+  return false;
 }
 
 assertArraysEqual = function (a, b){
