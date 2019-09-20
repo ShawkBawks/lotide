@@ -40,8 +40,6 @@ const map = (array, callback) => {
 const results1 = map(words, word => word[0]);
 const results2 = map(words, word => word[0]);
 // const results3 = map(days, day => day[2]);
-assertArraysEqual(
-  eqArrays(results1, results2), true
-);
+assertArraysEqual(eqArrays(results1, results2), true);
 assertArraysEqual(eqArrays(words, words2),false);
 assertArraysEqual(eqArrays(nums, nums2),false);
