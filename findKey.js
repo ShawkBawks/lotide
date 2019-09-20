@@ -7,9 +7,12 @@ const assertEqual = function(actual, expected) {
 };
 
 const findKey = (arr, callback) => {
- const results = {};
-  for (let item of arr){
-   results.push(callback(item));
+ const results = Object.keys(arr);
+  for (let value of arr){
+    if (obj[key] === value){
+      return value
+    }
+   
  }  
 
  return results;
