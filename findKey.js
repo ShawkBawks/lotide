@@ -6,25 +6,29 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const findKey = (arr, callback) => {
- const results = Object.keys(arr);
-  for (let value of arr){
-    if (obj[key] === value){
-      return value
+const findKey = (obj, callback) => {
+  const keys = Object.keys(obj)
+  // console.log(keys);
+  // console.log(Object.values(obj))
+  for (let key of keys){   //key = individual key / keys = full list of names
+    // console.log('---',obj[key])
+    if (callback(obj[key]) ){ //obj[key] is the object of the individual key in this case 'stars'
+    return key;  //returns key once encountering stars 2 - being 'noma'
     }
-   
- }  
-
- return results;
+  }
+return undefined;
 }
 
+  
 
-findKey({
+
+
+assertEqual(findKey({
   "Blue Hill": { stars: 1 },
   "Akaleri":   { stars: 3 },
   "noma":      { stars: 2 },
   "elBulli":   { stars: 3 },
   "Ora":       { stars: 2 },
   "Akelarre":  { stars: 3 }
-}, x => x.stars === 2) // => "noma"
+}, x => x.stars === 2), "noma"); // => "noma"    actual = x.stars === 2, noma being expected
 
