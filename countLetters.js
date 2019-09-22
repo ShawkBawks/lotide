@@ -24,4 +24,4 @@ let countLetters = function (sentence) {
 };
 
 const letterTotals = countLetters(quote);
-console.log(letter);
+console.log(letterTotals);
