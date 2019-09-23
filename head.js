@@ -1,6 +1,5 @@
 const assertEqual = require(`./assertEqual`);
 
-
 const head = function(array) {
   for (let i = 0; i < array.length; i++)
   return array[0];
@@ -8,4 +7,3 @@ const head = function(array) {
 }
 
 module.exports = head;
-

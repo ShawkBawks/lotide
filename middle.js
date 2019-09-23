@@ -1,24 +1,5 @@
-eqArrays = function(a, b){
-  if (a instanceof Array && b instanceof Array) {
-    if (a.length != b.length)  //ensuring correct length
-    return false;
-  for (let i =0; i< a.length; i++) //ensuring each element is equal
-     if (!eqArrays(a[i], b[i]))
-        return (false);
-  return (true);
-
-  }else {
-    return a===b;
-  }
-}
-assertArraysEqual = function (a, b){
-if (eqArrays(a,b)){
-  console.log("this array is true");
-  
-}else {
-  console.log("this array is false");
-}
-}
+const eqArrays = require (`./eqArrays`)
+const assertArraysEqual = require (`./assertArraysEqual`);
 
 middle = function(arr){
   if (arr.length === 1 || arr.length === 2){

@@ -1,28 +1,19 @@
-const eqArrays = function(a, b){
-  if (a instanceof Array && b instanceof Array) {
-    return JSON.stringify(a) === JSON.stringify(b);
+const assertArrayEqual = function(array1, array2) {
+  if (array1.length !== array2.length) {
+    console.log(
+      `\uD83D\uDD34\uD83D\uDD34\uD83D\uDD34 Assertion Failed: ${array1} === ${array2}`
+    );
+    return;
   }
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] !== array2[i]) {
+      console.log(
+        `\uD83D\uDD34\uD83D\uDD34\uD83D\uDD34 Assertion Failed: ${array1} === ${array2}`
+      );
+      return;
+    }
+  }
+  console.log(`\u2705\u2705\u2705 Assertion Passed: ${array1} === ${array2}`);
+};
 
-  return false;
-}
-
-assertArraysEqual = function (a, b){
-if (eqArrays(a === b)){
-  console.log(`😁😁😁 Assertion passed! ${a} === ${b}`);
-  
-}else {
-  console.log(`👺👺👺 Assertion failed! ${a} !== ${b}`);
-}
-
-}
-
-assertArraysEqual(['1', '2'], ['1', '3']);
-
-
-// const assertEqual = function(actual, expected) {
-//   if (actual === expected) {
-//     return (`\u1F60A, \u1F60A, \u1F60A, Assertion Passed:  ${actual} === ${expected}`);
-//   } else if (actual !== expected) {
-//     return (`\u1F92C, \u1F92C, \u1F92C, Assertion failed: ${actual} !== ${expected}`);
-//   }
-// };
+module.exports = assertArrayEqual;
