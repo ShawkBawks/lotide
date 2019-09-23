@@ -42,4 +42,4 @@ for (let letter of letters){
 
 
 
-console.log(assertArraysEqual(letterPositions("Hello").e, [1]));
+assertArraysEqual(letterPositions("Hello").e, [1]);
