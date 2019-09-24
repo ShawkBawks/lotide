@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@logrob/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Contains all functions for our lotide project",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/ShawkBawks/lotide.git"
   },
-  "author": "",
+  "author": "Logan Roberts",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ShawkBawks/lotide/issues"
