@@ -6,7 +6,7 @@ const assertEqual = function (actual, expected) {
   }
 };
 
-eqArrays = function (a, b) {
+const eqArrays = function (a, b) {
   if (a instanceof Array && b instanceof Array) {
     if (a.length != b.length)  //ensuring correct length
       return false;
