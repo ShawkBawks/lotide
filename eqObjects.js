@@ -50,3 +50,5 @@ console.log(eqArrays(eqObjects(ab, ba), false));
 console.log(eqArrays(eqObjects(cab, abc), false));
 console.log(eqArrays(eqObjects(ba, cd), false));
 console.log(eqArrays(eqObjects(cd, cd2), false));
+
+module.exports = eqObjects;

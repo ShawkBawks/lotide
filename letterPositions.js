@@ -43,3 +43,4 @@ for (let letter of letters){
 
 
 assertArraysEqual(letterPositions("Hello").e, [1]);
+module.exports = letterPositions;

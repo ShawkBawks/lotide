@@ -25,3 +25,5 @@ let countLetters = function (sentence) {
 
 const letterTotals = countLetters(quote);
 console.log(letterTotals);
+
+module.exports = countLetters;

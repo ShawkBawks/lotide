@@ -31,7 +31,7 @@ const ab  = { a: "5",      b: [2, 5]};
 const ba  = { b: [2, 5],   a: "5"};
 assertObjectsEqual(ab, ba);
 
-
+module.exports = assertObjectsEqual;
 // eqArrays = function(a, b){
 //   if (a instanceof Array && b instanceof Array) {
 //     if (a.length != b.length)  //ensuring correct length
